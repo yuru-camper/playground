@@ -9,7 +9,9 @@
       <h4>Password</h4>
       <input type="text" id="password" v-model="password">
     </div>
-    <p class="error_message"></p>
+    <p class="error_message" v-show="valid">
+      {{ valid_error }}
+    </p>
     <button @click="login">sign in</button>
   </div>
 </template>
@@ -36,9 +38,6 @@ export default {
           this.valid = true;
         })
     }
-  },
-  mounted() {
-    alert(process.env.VUE_APP_apiKey)
   }
 }
 </script>

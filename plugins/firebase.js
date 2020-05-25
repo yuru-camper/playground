@@ -1,7 +1,11 @@
-import firebase from "firebase"
+import firebase from "firebase/app";
+
+// Add the Firebase services that you want to use
+import "firebase/auth";
+import "firebase/firestore";
 
 const config = {
-    apiKey: process.env.VUE_APP_apiKey,
+    apiKey: process.env.apiKey,
     authDomain: process.env.VUE_APP_authDomain,
     databaseURL: process.env.VUE_APP_databaseURL,
     projectId: process.env.VUE_APP_projectId,
@@ -13,6 +17,7 @@ const config = {
 
 if (!firebase.apps.length) {
     firebase.initializeApp(config)
+    console.log(process.env.env_test)
 }
 
 export default firebase;
