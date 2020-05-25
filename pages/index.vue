@@ -36,6 +36,9 @@ export default {
           this.valid = true;
         })
     }
+  },
+  mounted() {
+    alert(process.env.VUE_APP_apiKey)
   }
 }
 </script>
