@@ -1,5 +1,14 @@
-// require('dotenv').config()
-// const {env_test} = process.env.VUE_APP_apiKey
+require('dotenv').config()
+const {
+  apiKey, 
+  authDomain,
+  databaseURL,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId,
+  measurementId
+} = process.env
 
 export default {
   mode: 'universal',
@@ -53,13 +62,13 @@ export default {
     }
   },
   env: {
-    apiKey: "AIzaSyBxQnVz9BYb3R0rgilwSN6xGIP83YGrYbY",
-    authDomain: "playground-b85cc.firebaseapp.com",
-    databaseURL: "https://playground-b85cc.firebaseio.com",
-    projectId: "playground-b85cc",
-    storageBucket: "playground-b85cc.appspot.com",
-    messagingSenderId: "617685239053",
-    appId: "1:617685239053:web:7c4020d4d737d250e79c44",
-    measurementId: "G-6YE6R287F2"
+    apiKey,
+    authDomain,
+    databaseURL,
+    projectId,
+    storageBucket,
+    messagingSenderId,
+    appId,
+    measurementId
   }
 }
