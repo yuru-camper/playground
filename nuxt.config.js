@@ -1,14 +1,14 @@
-require('dotenv').config()
-const {
-  apiKey, 
-  authDomain,
-  databaseURL,
-  projectId,
-  storageBucket,
-  messagingSenderId,
-  appId,
-  measurementId
-} = process.env
+// require('dotenv').config()
+// const {
+//   apiKey, 
+//   authDomain,
+//   databaseURL,
+//   projectId,
+//   storageBucket,
+//   messagingSenderId,
+//   appId,
+//   measurementId
+// } = process.env
 
 export default {
   mode: 'universal',
@@ -61,14 +61,14 @@ export default {
     extend (config, ctx) {
     }
   },
-  env: {
-    apiKey,
-    authDomain,
-    databaseURL,
-    projectId,
-    storageBucket,
-    messagingSenderId,
-    appId,
-    measurementId
-  }
+  // env: {
+  //   apiKey,
+  //   authDomain,
+  //   databaseURL,
+  //   projectId,
+  //   storageBucket,
+  //   messagingSenderId,
+  //   appId,
+  //   measurementId
+  // }
 }
