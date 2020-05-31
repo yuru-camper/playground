@@ -16,7 +16,8 @@ import "firebase/firestore";
 
 const config = {
     apiKey: "AIzaSyBxQnVz9BYb3R0rgilwSN6xGIP83YGrYbY",
-    authDomain: "playground-b85cc.firebaseapp.com",
+    // authDomain: "playground-b85cc.firebaseapp.com",
+    authDomain: "yuru-camper.com",
     databaseURL: "https://playground-b85cc.firebaseio.com",
     projectId: "playground-b85cc",
     storageBucket: "playground-b85cc.appspot.com",

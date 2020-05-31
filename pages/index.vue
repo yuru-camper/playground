@@ -1,18 +1,23 @@
 <template>
   <div class="container">
-    <h3>sign in</h3>
-    <div class="mail_address">
-      <h4>Mail Address</h4>
-      <input type="text" id="mail_address" v-model="mail_address">
+    <div class="sign_in --with_mail">
+      <h3>sign in</h3>
+      <div class="mail_address">
+        <h4>Mail Address</h4>
+        <input type="text" id="mail_address" v-model="mail_address">
+      </div>
+      <div class="password">
+        <h4>Password</h4>
+        <input type="text" id="password" v-model="password">
+      </div>
+      <p class="error_message" v-show="valid">
+        {{ valid_error }}
+      </p>
+      <button @click="login">sign in</button>
     </div>
-    <div class="password">
-      <h4>Password</h4>
-      <input type="text" id="password" v-model="password">
+    <div class="sign_in --with_google">
+      <button @click="login_with_google">sign in with google</button>
     </div>
-    <p class="error_message" v-show="valid">
-      {{ valid_error }}
-    </p>
-    <button @click="login">sign in</button>
   </div>
 </template>
 
@@ -25,7 +30,7 @@ export default {
       mail_address: '',
       password: '',
       valid: false,
-      valid_error: 'UserIDまたはPasswordが間違っています'
+      valid_error: 'UserIDまたはPasswordが間違っています',
     }
   },
   methods: {
@@ -36,6 +41,29 @@ export default {
           this.$router.push('top')
         }).catch((error) => {
           this.valid = true;
+        })
+    },
+    login_with_google() {
+      let provider = new firebase.auth.GoogleAuthProvider()
+      provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      firebase.auth().languageCode = 'ja';
+      provider.setCustomParameters({
+        'login_hint': 'user@example.com'
+      });
+
+      firebase.auth().signInWithPopup(provider)
+        .then(result => {
+          console.log('successd')
+          // console.log(result.credential.accessToken)
+          console.log(result.user)
+          this.$router.push('top')
+        }).catch((error) => {
+          console.log('failed')
+          this.valid = true
+          console.log(error.code);
+          console.log(error.message);
+          console.log(error.email);
+          console.log(error.credential);
         })
     }
   }
