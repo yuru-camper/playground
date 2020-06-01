@@ -10,18 +10,36 @@
 
 
 <style lang="scss">
-    .navigator {
-        position: fixed;
-        top: 0;
-        left: 0;
-        
-        a {
-            button {
-                background: $bg-color;
-                border: none;
+    @media screen and (min-width: $pc-width) {
+        .navigator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 100px 50px;
+            
+            a {
+                button {
+                    background: $bg-color;
+                    border: none;
+                    font-size: 18px;
+                    color: $light-color;
+                    outline: none;
+                    padding: 7px 15px;
+                    border-radius: 5px;
+                    letter-spacing: 0.05em;
+                }
+
+                &.nuxt-link-exact-active {
+                    button {
+                        background: $normal-color;
+                        color: $bg-color;
+                    }
+                }
             }
         }
     }
+    
 </style>
 
 
@@ -36,7 +54,7 @@ export default {
                 },
                 {
                     name: '実験場',
-                    path: '/top'
+                    path: '/test_site/top'
                 }
             ]
         }

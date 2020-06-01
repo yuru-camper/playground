@@ -1,0 +1,69 @@
+<template>
+    <div class="test_site">
+        <div class="head">
+            実験場
+        </div>
+
+        <div class="tests">
+            <div class="test" v-for="(test, i) in tests" :key="i">
+                <nuxt-link :to="'./tests/' + test.path">
+                    <button>
+                        {{ test.name }}
+                        <!-- <img src="http://img.youtube.com/vi/x2tmrynUa8U/0.jpg" alt=""> -->
+                    </button>
+                </nuxt-link>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<style lang="scss">
+@media screen and (min-width: $pc-width) {
+    .test_site {
+        width: 60%;
+        margin: 80px auto;
+
+        .head {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.07em;
+        }
+
+        .tests {
+            margin: 50px 0;
+            .test {
+                margin-bottom: 20px;
+                button {
+                    background: none;
+                    outline: none;
+                    border: none;
+                    color: $normal-color;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+</style>
+
+
+<script>
+export default {
+    data() {
+        return {
+            tests: [
+                {
+                    name: 'メールアドレスでサインイン',
+                    path: 'sign_in_test'
+                },
+                {
+                    name: 'リンクのプレビュー',
+                    path: 'link_prevue_test'
+                }
+            ]
+        }
+    }
+}
+</script>
