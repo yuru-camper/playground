@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navigator />
     <nuxt />
   </div>
 </template>
@@ -53,3 +54,14 @@ html {
   background-color: #35495e;
 }
 </style>
+
+
+<script>
+import Navigator from '~/components/Navigator'
+
+export default {
+  components: {
+    Navigator
+  }
+}
+</script>
