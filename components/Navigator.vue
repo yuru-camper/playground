@@ -28,6 +28,7 @@
                     padding: 7px 15px;
                     border-radius: 5px;
                     letter-spacing: 0.05em;
+                    cursor: pointer;
                 }
 
                 &.nuxt-link-exact-active {

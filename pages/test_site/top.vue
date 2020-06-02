@@ -39,8 +39,9 @@
                     background: none;
                     outline: none;
                     border: none;
-                    color: $normal-color;
+                    color: $link-color;
                     font-size: 18px;
+                    cursor: pointer;
                 }
             }
         }
@@ -61,6 +62,10 @@ export default {
                 {
                     name: 'リンクのプレビュー',
                     path: 'link_prevue_test'
+                },
+                {
+                    name: '学習動画の実験',
+                    path: 'learning_videos_test'
                 }
             ]
         }
