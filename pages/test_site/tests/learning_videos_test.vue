@@ -76,12 +76,11 @@ export default {
             db.collection('videos').get()
                 .then((snapshot) => {
                     snapshot.forEach((doc) => {
-                        console.log(doc.id, '=>', doc.data());
                         this.videos.push(doc.data())
                     });
                 })
                 .catch((err) => {
-                    console.log('Error getting documents', err);
+                    console.log('Error getting documents =>', err);
                 });
         }
     }
