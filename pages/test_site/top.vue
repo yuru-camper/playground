@@ -47,6 +47,34 @@
         }
     }
 }
+
+@media screen and (max-width: $sp-width) {
+    .test_site {
+        margin: 10vw 5vw;
+
+        .head {
+            font-size: 4.5vw;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.07em;
+        }
+
+        .tests {
+            margin: 8vw 0;
+            .test {
+                margin-bottom: 5vw;
+                button {
+                    background: none;
+                    outline: none;
+                    border: none;
+                    color: $link-color;
+                    font-size: 4vw;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
 </style>
 
 

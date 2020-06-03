@@ -8,3 +8,16 @@ $link-color: #2A51EE;
 // for resposive
 $pc-width: 768px;
 $sp-width: 767px;
+
+
+@media screen and (min-width: $pc-width) {
+    .sp {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $sp-width) {
+    .pc {
+        display: none;
+    }
+}

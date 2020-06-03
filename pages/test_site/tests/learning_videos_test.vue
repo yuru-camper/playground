@@ -10,7 +10,7 @@
                     <div class="title">
                         {{ video.title }}
                     </div>
-                    <div class="description">
+                    <div class="description pc">
                         {{ video.description }}
                     </div>
                 </div>
@@ -52,6 +52,42 @@
                     .title {
                         font-size: 18px;
                         margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sp-width) {
+    .learning_videos_test {
+        margin: 10vw 5vw;
+
+        .head {
+            font-size: 5vw;
+            text-align: center;
+            letter-spacing: 0.05em;
+            margin-bottom: 8vw;
+        }
+
+        .videos {
+            .video {
+                margin-bottom: 5vw;
+                text-decoration: none;
+                display: block;
+
+                img {
+                    width: 90vw;
+                    height: calc(90vw / 16 * 9);
+                    object-fit: cover;
+                }
+
+                .info {
+                    color: $normal-color;
+
+                    .title {
+                        font-size: 4vw;
+                        margin-bottom: 3vw;
                     }
                 }
             }
