@@ -94,6 +94,14 @@ export default {
                 {
                     name: '学習動画の実験',
                     path: 'learning_videos_test'
+                },
+                {
+                    name: '文字色と背景色のコントラスト',
+                    path: 'contrast'
+                },
+                {
+                    name: '音声コーパスを作ろう',
+                    path: 'audio_alignment'
                 }
             ]
         }

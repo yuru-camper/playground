@@ -89,7 +89,7 @@ export default {
                 },
                 {
                     name: '実験場',
-                    path: '/test_site/top'
+                    path: '/test_site/'
                 }
             ]
         }

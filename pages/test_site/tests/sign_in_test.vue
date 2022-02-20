@@ -13,6 +13,8 @@
       <p class="error_message" v-show="valid">
         {{ valid_error }}
       </p>
+      <button data-sitekey="6LdahKoZAAAAAKTZES6Pvb_rHibLkwp8o0tvupNu" @click="recaptcha">recaptcha</button>
+      {{ recap_judge }}
       <button @click="login">sign in</button>
     </div>
   </div>
@@ -28,6 +30,7 @@ export default {
       password: '',
       valid: false,
       valid_error: 'UserIDまたはPasswordが間違っています',
+      recap_judge: ''
     }
   },
   methods: {
@@ -39,6 +42,16 @@ export default {
         }).catch((error) => {
           this.valid = true;
         })
+    },
+    recaptcha(e) {
+      e.preventDefault()
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LdahKoZAAAAAKTZES6Pvb_rHibLkwp8o0tvupNu', {action: 'submit'}).then(token => {
+            this.recap_judge = token
+            console.log('in: ' + this.recap_judge)
+        })
+        console.log('out: ' + this.recap_judge)
+      })
     }
   }
 }
