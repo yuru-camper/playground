@@ -12,16 +12,16 @@
             </div>
         </div>
         <div class="loading" v-show="loading">
-            <p>Loading...</p>
+            <p>Loading...　少し待ってね</p>
         </div>
         <main>
             <div class="imgWrapper">
                 <div class="text">この画像はなに？</div>
-                <img src="@/assets/imgs/panda.jpeg" alt="" id="inputImg">
+                <img src="@/assets/imgs/emu.jpeg" alt="" id="inputImg">
             </div>
             <div class="answers">
                 <div class="item" v-for="(answer, i) in answers" :key="i">
-                    <input type="text" v-model="answers[i]['answer']" @focus="answer['focus'] = true" :disabled="answer['rank'] != '-'">
+                    <input type="text" v-model="answers[i]['answer']" @focus="answer['focus'] = true" :disabled="answer['rank'] != '-'" placeholder="ひらがなで入力">
                     <div class="info">
                         <div class="rank">
                             予測順位：{{ answer['rank'] }} <span>/ 1000位</span>

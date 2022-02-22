@@ -18,10 +18,11 @@
         <div class="container">
             <div class="title">ルール</div>
             <div class="text">
-                <p>入力欄に「AIが分類しそうなクラス」を入力します。</p>
-                <p>入力はひらがなで行い、出てきた候補をクリックすることで選択が確定し、AIによる予測順位とスコアが出ます。</p>
-                <p>予測順位は、予測の確信度が上から何番目かをあらわし、スコアは確信度によって算出されます。</p>
-                <p>5回分のスコアの合計をできる限り大きくして、AIへの適合度を高めていきましょう。</p>
+                <p>・入力欄に「AIが分類しそうなクラス」を入力します。</p>
+                <p>・必ず「ひらがな」で入力してください。</p>
+                <p>・入力はひらがなで行い、出てきた候補をクリックすることで選択が確定し、AIによる予測順位とスコアが出ます。</p>
+                <p>・予測順位は、予測の確信度が上から何番目かをあらわし、スコアは確信度によって算出されます。</p>
+                <p>・5回分のスコアの合計をできる限り大きくして、AIへの適合度を高めていきましょう。</p>
             </div>
         </div>
         <div class="container">
@@ -39,7 +40,39 @@
 
 
 <style scoped lang="scss">
+a {
+    color: #fff;
+}
+
 @media screen and (max-width: 768px) {
+    .rule {
+        margin: 50px 4vw;
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .container {
+            margin-bottom: 80px;
+
+            .title {
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .text {
+                font-size: 16px;
+
+                p {
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
     .rule {
         margin: 50px 4vw;
 

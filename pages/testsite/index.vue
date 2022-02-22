@@ -6,7 +6,7 @@
 
         <div class="tests">
             <div class="test" v-for="(test, i) in tests" :key="i">
-                <nuxt-link :to="'./tests/' + test.path">
+                <nuxt-link :to="'/testsite/tests/' + test.path">
                     <button>
                         {{ test.name }}
                         <!-- <img src="http://img.youtube.com/vi/x2tmrynUa8U/0.jpg" alt=""> -->
